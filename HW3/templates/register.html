@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #1877f2;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 8px 0 3px;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccd0d5;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .sex-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        .sex-option {
+            flex: 1;
+            border: 1px solid #ccd0d5;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 8px;
+            text-align: left;
+        }
+        .sex-option:last-child {
+            margin-right: 0;
+        }
+        .sex-option input {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #166fe5;
+        }
+        small {
+            color: #606770;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="/output" method="POST">
+            <label>Lastname</label>
+            <input type="text" name="lastname" required>
+
+            <label>Firstname</label>
+            <input type="text" name="firstname" required>
+
+            <label>Sex</label>
+            <div class="sex-group">
+                <label class="sex-option">
+                    <input type="radio" name="sex" value="Male" required> Male
+                </label>
+                <label class="sex-option">
+                    <input type="radio" name="sex" value="Female" required> Female
+                </label>
+            </div>
+
+            <label>Institution</label>
+            <select name="institution" required>
+                <option value="PSU">PSU</option>
+                <option value="UCU">UCU</option>
+                <option value="PU">PU</option>
+            </select>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <button type="submit">Register</button>
+
+            <small>Skibidi.</small>
+        </form>
+    </div>
+
+</body>
+</html>
